@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>    
+    <header class="header">
+      <div class="logo">VENIA</div>
+      <div class="hamberger-icon">
+        <img src="assets/menu.png" alt="">
+      </div>
+      <nav class="navbar">
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Electronics</a></li>
+              <li><a href="#">Jewellery</a></li>
+          </ul>
+      </nav>
+      <div class="cart-icon">
+          <img src="./assets/shopping-bag.png" alt="Cart Icon">
+          <span>10</span>
+      </div>
+  </header>
+
+<!-- Men's Outerwear Section -->
+<section class="outerwear-section">
+    <div class="outerwear-container">
+        <div class="outerwear-text">
+            <h2>Men’s Outerwear</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="outerwear-image">
+            <img src="./assets/homepage.jfif" alt="Men's Outerwear Image">
+        </div>
+    </div>
+</section>
+
+<div class="product-listing-page">
+    <!-- Sidebar (Filters) -->
+    <div class="filters-category">
+        <fragments>
+        <h4>Filters</h4>
+        <h3>Categories</h3>
+        <div class="filter-category">
+            <input type="checkbox" id="jewellery" value="jewelery"/>
+            <label for="jewellery">Jewellery</label>
+        </div>
+        <div class="filter-category">
+            <input type="checkbox" id="electronics" value="electronics"/>
+            <label for="electronics">Electronics</label>
+        </div>
+        <div class="filter-category">
+            <input type="checkbox" id="mens-clothing" value="men's clothing"/>
+            <label for="mens-clothing">Men's Clothing</label>
+        </div>
+        <div class="filter-category">
+            <input type="checkbox" id="womens-clothing" value="women's clothing"/>
+            <label for="womens-clothing">Women's Clothing</label>
+        </div>
+        </fragments>
+    </div>
+    <div class="sidebar-toggle">
+        <img src="./assets/sliders.png" alt="icon">
+        <span id="filter-text">Filters Results</span> 
+    </div>
+        <div class="filters-category2">
+
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h4>Filters & Sort</h4>
+                <span id="close-sidebar">&times;</span> 
+            </div>
+            <div class="filter-category">
+                <input type="checkbox" id="jewellery" value="jewelery"/>
+                <label for="jewellery">Jewellery</label>
+            </div>
+            <div class="filter-category">
+                <input type="checkbox" id="electronics" value="electronics"/>
+                <label for="electronics">Electronics</label>
+            </div>
+            <div class="filter-category">
+                <input type="checkbox" id="mens-clothing" value="men's clothing"/>
+                <label for="mens-clothing">Men's Clothing</label>
+            </div>
+            <div class="filter-category">
+                <input type="checkbox" id="womens-clothing" value="women's clothing"/>
+                <label for="womens-clothing">Women's Clothing</label>
+            </div>
+
+            <div class="sidebar-toggle">
+                <span id="filter-result-count">See Results</span>
+            </div>
+        </div>
+        </div>
+
+    
+    <!-- Products Section -->
+    <div class="products-section">
+        <div class="products-header">
+            <span id="result-count">0 Results</span>
+            <div class="filter">
+            <select id="sort">
+                <option value="default">Sort by Price</option>
+                <option value="priceAsc">Price: Low to High</option>
+                <option value="priceDesc">Price: High to Low</option>
+            </select>
+        </div>
+        </div>
+
+        <div class="search-bar-container">
+            <input type="text" id="search-bar" placeholder="Search for products...">
+        </div >
+    
+        <section id="product-grid" class="grid"></section>
+    
+        <div id="loading" class="loading">Loading...</div>
+    
+        <div class="load-more-container">
+            <button id="load-more">Load More</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer class="footer-section">
+  <div class="footer-container">
+      <div class="footer-column">
+          <h4>Account</h4>
+          <ul>
+              <li><a href="#">Sign In</a></li>
+              <li><a href="#">Register</a></li>
+              <li><a href="#">Order Status</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h4>About Us</h4>
+          <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Careers</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h4>Help</h4>
+          <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Returns</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h4>Follow Us!</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <div class="footer-social">
+              <a href="#"><img src="./assets/instagram.svg" alt="Instagram"></a>
+              <a href="#"><img src="./assets/facebook.svg" alt="Facebook"></a>
+              <a href="#"><img src="./assets/twitter.svg" alt="Twitter"></a>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <div class="footer-logo">
+          <p>VENIA</p>
+      </div>
+      <p>© Company Name Address Ave, City Name, State ZIP</p>
+      <div class="footer-links">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+      </div>
+  </div>
+</footer>
+
+  <script src="./index.js"></script>
+</body>
+</html>

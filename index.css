@@ -1,0 +1,536 @@
+/* Global Styles */
+html {
+  font-size: 16px; 
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0d6efd;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+}
+
+.cart-icon span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: 4px 4px;
+    border-radius: 50%;
+}
+.hamberger-icon{
+  display: none;
+}
+
+@media  (max-width: 768px){
+  
+.navbar ul li a {
+    display:none;
+}
+.logo {
+  display: none;
+}
+.hamberger-icon{
+  display: block;
+  filter: invert(100%);
+}
+}
+
+
+/* Outerwear Section Styling */
+.outerwear-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 40px 20px; */
+  background-color: #f8f8f8;
+  
+}
+
+.outerwear-container {
+  display: flex;
+  /* max-width: 1200px; */
+  width: 100%;
+}
+
+.outerwear-text {
+  flex: 0 0 30%;
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.outerwear-text h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 40px;
+  height: 3px;
+  background-color: #007bff;
+  margin-top: 10px;
+}
+
+.outerwear-image {
+  flex: 0 0 70%;
+  overflow: hidden;
+}
+
+.outerwear-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .outerwear-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    
+  }
+
+  .outerwear-image {
+      order: -1;
+      width: 90vw;
+  }
+  .outerwear-text {
+    /* flex: 0 0 30%; */
+    top: -20px;
+    position: relative;
+
+    
+  }
+}
+
+/* Main container */
+.product-listing-page {
+  display: flex;
+  padding: 20px;
+}
+
+/* Sidebar (Filters) */
+.filters-category {
+  width: 30%;
+  padding-right: 20px;
+  display: flex;
+  justify-content: end;
+  border-top: 2px solid #e0e0e0;
+}
+.filters-category2 {
+  display: flex;
+}
+
+
+.filters-category h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-top: 2px solid #e0e0e0;
+  padding-top: 10px;
+  color: #181C24;
+}
+.filters-category h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  color: #181C24;
+}
+
+.filter-category {
+  margin-bottom: 10px;
+}
+
+.filter-category input {
+  margin-right: 10px;
+}
+
+/* Product Section */
+.products-section {
+  width: 60%;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 10px; */
+  padding: 20px;
+
+}
+
+.sort-by {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.search-bar-container {
+  padding: 20px;
+  text-align: left;
+}
+
+#search-bar {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filters select,
+.filters button {
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.product-card h4 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #172026;
+}
+
+.product-card p {
+  color:#172026;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.product-card h6 {
+  color:#666;
+  font-size: 0.8rem;
+}
+
+.loading {
+  text-align: center;
+  display: none;
+  font-size: 1.5rem;
+}
+
+.load-more-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.load-more-container button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .product-listing-page {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .products-header{
+    display: flex;
+    flex-direction: column;
+    color: #172026;
+  }
+  #search-bar {
+      width: 90%;
+  }
+
+  .filters {
+      flex-direction: column;
+      align-items: center;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 90%);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+
+  }
+  
+  .product-card h4 {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    color: #666;
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Footer Section Styling */
+.footer-section {
+  background-color: #f8f8f8;
+  padding: 40px ;
+  font-family: 'Arial', sans-serif;
+  border-top: 2px solid #e0e0e0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 22%;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #172026;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social a img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 2px solid #e0e0e0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-logo p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  text-decoration: underline;
+  color: #666;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-column {
+      width: 45%;
+      margin-bottom: 20px;
+  }
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+      width: 100%;
+  }
+
+  .footer-bottom p {
+      margin-bottom: 5px;
+  }
+
+  .footer-links {
+      display: block;
+  }
+
+  .footer-links a {
+      display: block;
+      margin: 5px 0;
+  }
+}
+
+
+/* Sidebar toggle for mobile */
+.sidebar-toggle {
+  display: none;
+  text-align: center;
+  font-size: 1.25rem; 
+  padding: 1rem; 
+  color: #181C24;
+  cursor: pointer;
+}
+
+.sidebar-toggle span {
+  margin-right: 1rem; 
+}
+
+/* Sidebar for filters */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%; 
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+}
+
+#close-sidebar {
+  font-size: 1.5rem; 
+  cursor: pointer;
+}
+
+/* Show the sidebar when open */
+.sidebar.open {
+  right: 0;
+}
+
+/* Hide sidebar on larger devices */
+@media (min-width: 768px) {
+  .sidebar-toggle {
+      display: none;
+  }
+  .filters-category2 .sidebar{
+    display: none;
+  }
+}
+
+/* Show sidebar toggle on small screens */
+@media (max-width: 768px) {
+  .sidebar-toggle {
+      display: block;
+  }
+  .filters-category fragments{
+    display: none;
+  }
+}
